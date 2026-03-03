@@ -69,19 +69,19 @@ Ik zal in mijn portfolio mijn vaardigheden als software developer showcasen, met
 
 ### 4.1 Brand Identity
 **Color Palette:**
-- Primary: [#hexcode - Description]
-- Secondary: [#hexcode - Description]
-- Accent: [#hexcode - Description]
-- Background: [#hexcode - Description]
-- Text: [#hexcode - Description]
+- Primary: #0099ff - Vibrant electric blue (main accent, CTAs, links)
+- Secondary: #00d4ff - Bright cyan (highlights, hover states)
+- Accent: #0066cc - Deep blue (secondary elements, depth)
+- Background: #0d0d0d - Rich dark charcoal (main background)
+- Text: #ffffff - Pure white (primary text, headings)
 
 **Typography:**
 - Headings: [Helvetica, 300]
 - Body: [Font family, weights]
 
 **Visual Style:**
-- Overall aesthetic: Modern and minimalist, Ethereal and colorful, Professional and corporate
-- Design inspiration: ismailkayadelen.com
+- Overall aesthetic: Modern and sleek with dynamic fluid elements, dark theme with vibrant blue accents creating high contrast, energetic yet professional with water/flow-inspired animations
+- Design inspiration: ismailkayadelen.com, Mentos Aqua Kiss packaging (fluid waves, premium dark aesthetic)
 
 ### 4.2 User Experience (UX)
 - [Simple and intuitive navigation]
