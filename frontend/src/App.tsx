@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Header } from './components/layout/Header';
+import { FluidBackground } from './components/ui/FluidBackground';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+    <div className="relative min-h-screen bg-dark text-white font-sans selection:bg-primary/30">
+      <FluidBackground />
+      <Header />
+      
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[200vh] pt-32">
+        <h1 className="text-4xl font-bold mb-8">Phase 2 Core Testing</h1>
+        <p className="max-w-xl text-center text-white/70">
+          This is a temporary assembly to demonstrate the fluid background,
+          the dynamic header structure, and scroll progress visibility.
+          Keep scrolling down to see the header react.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
