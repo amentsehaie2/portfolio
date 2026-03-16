@@ -26,7 +26,7 @@ export const ProjectCard = ({
       whileHover={{ y: -5 }}
       className="group relative overflow-hidden rounded-xl bg-dark-lighter border border-white/5 transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,153,255,0.15)] flex flex-col h-full"
     >
-      <div className="relative aspect-video overflow-hidden">
+      <div className="relative h-64 overflow-hidden">
         <img
           src={imageUrl}
           alt={title}
