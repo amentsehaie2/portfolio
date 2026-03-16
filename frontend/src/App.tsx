@@ -1,9 +1,11 @@
 import { Header } from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
 import { FluidBackground } from './components/ui/FluidBackground';
 import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
 import { Portfolio } from './components/sections/Portfolio';
 import { Skills } from './components/sections/Skills';
+import { Contact } from './components/sections/Contact';
 
 function App() {
   return (
@@ -16,7 +18,10 @@ function App() {
         <About />
         <Portfolio />
         <Skills />
+        <Contact />
       </main>
+
+      <Footer />
     </div>
   );
 }

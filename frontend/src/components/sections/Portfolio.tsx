@@ -1,5 +1,7 @@
 import { FadeIn } from '../../animations/FadeIn';
 import { ProjectCard } from '../ui/ProjectCard';
+import sonicLensImg from '../../assets/images/sonic_lens_showcase.png';
+
 
 const GITHUB_PROFILE = 'https://github.com/amentsehaie2';
 
@@ -10,7 +12,7 @@ const projects = [
     description:
       'An AI-powered Chrome extension that automatically gets the lyrics from songs, saving you time by extracting the key, chord tones and other musical insights from any video in seconds.',
     tags: ['Chrome Extension', 'Cloudflare', 'React', 'TypeScript'],
-    imageUrl: 'https://images.unsplash.com/photo-1614854262318-831574f15f1f?w=800&q=80',
+    imageUrl: sonicLensImg,
     githubUrl: GITHUB_PROFILE,
     outcomes:
       'Makes learning new songs a piece of cake.',

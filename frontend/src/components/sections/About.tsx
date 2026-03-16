@@ -4,21 +4,21 @@ import { FadeIn } from '../animations/FadeIn';
 export const About = () => {
   const values = [
     {
-      id: 'sociaal',
-      title: 'Sociaal Sterk',
-      description: 'Ik communiceer helder, sta open voor feedback en werk graag samen om tot het beste resultaat te komen.',
+      id: 'social',
+      title: 'Strong Communicator',
+      description: 'I communicate clearly, am open to feedback, and enjoy collaborating to achieve the best results.',
       icon: <Users className="w-8 h-8 text-primary group-hover:text-white transition-colors" />,
     },
     {
-      id: 'doelgericht',
-      title: 'Doelgericht',
-      description: 'Gefocust op het eindresultaat. Ik analyseer problemen grondig en werk methodisch naar de oplossing toe.',
+      id: 'goal-oriented',
+      title: 'Goal-Oriented',
+      description: 'Focused on the end result. I analyze problems thoroughly and work methodically towards the solution.',
       icon: <Target className="w-8 h-8 text-secondary group-hover:text-white transition-colors" />,
     },
     {
-      id: 'cooperatief',
-      title: 'Coöperatief',
-      description: 'Een teamspeler die waarde hecht aan synergie. Samen bereiken we meer dan alleen.',
+      id: 'cooperative',
+      title: 'Cooperative',
+      description: 'A team player who values synergy. Together we achieve more than alone.',
       icon: <Activity className="w-8 h-8 text-accent group-hover:text-white transition-colors" />,
     },
   ];

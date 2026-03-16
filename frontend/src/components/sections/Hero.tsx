@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '../ui/Button';
+import profileImg from '../../assets/images/profile.jpg';
 
 export const Hero = () => {
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
+  const scrollToWork = () => {
+    const aboutSection = document.getElementById('work');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -24,8 +25,7 @@ export const Hero = () => {
           className="relative mb-8"
         >
           <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-primary shadow-[0_0_30px_rgba(0,153,255,0.4)] bg-dark-lighter flex items-center justify-center">
-            {/* Fallback avatar if no image is present */}
-            <span className="text-6xl font-light text-primary/50">AT</span>
+            <img src={profileImg} alt="Amen Tsehaie" className="w-full h-full object-cover" />
           </div>
           
           {/* Subtle pulse behind the photo */}
@@ -66,7 +66,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
         >
-          <Button onClick={scrollToAbout} className="px-8 font-semibold tracking-wide">
+          <Button onClick={scrollToWork} className="px-8 font-semibold tracking-wide">
             Explore My Work
           </Button>
           
@@ -90,7 +90,7 @@ export const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        onClick={scrollToAbout}
+        onClick={scrollToWork}
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
