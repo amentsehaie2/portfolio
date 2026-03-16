@@ -2,6 +2,8 @@ import { Header } from './components/layout/Header';
 import { FluidBackground } from './components/ui/FluidBackground';
 import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
+import { Portfolio } from './components/sections/Portfolio';
+import { Skills } from './components/sections/Skills';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <main className="relative z-10">
         <Hero />
         <About />
+        <Portfolio />
+        <Skills />
       </main>
     </div>
   );

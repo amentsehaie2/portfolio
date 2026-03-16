@@ -67,7 +67,7 @@ export const ProjectCard = ({
             <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
               <Button variant="secondary" className="w-full gap-2 overflow-hidden px-2">
                 <Github size={18} className="flex-shrink-0" />
-                <span className="truncate">View Code</span>
+                <span className="truncate">View Project</span>
               </Button>
             </a>
           )}
