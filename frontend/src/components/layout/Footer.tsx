@@ -1,4 +1,5 @@
 import { Github, Linkedin, Instagram, ArrowUp } from 'lucide-react';
+import logoImage from '../../assets/images/logo2.png';
 
 const NAV_LINKS = [
   { label: 'About',   href: '#about'   },
@@ -35,8 +36,8 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
           {/* Logo */}
-          <div className="flex items-center justify-center w-10 h-10 rounded-[10px] border border-white/20 bg-white text-dark font-black text-base select-none flex-shrink-0">
-            A.T
+          <div className="flex items-center justify-center w-12 h-12 rounded-[10px] bg-transparent select-none flex-shrink-0">
+            <img src={logoImage} alt="Amen Tsehaie logo" className="w-10 h-10 object-contain scale-[1.38] drop-shadow-[0_0_14px_rgba(255,255,255,0.18)]" />
           </div>
 
           {/* Nav links */}
@@ -74,7 +75,7 @@ export const Footer = () => {
         {/* Bottom row */}
         <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/30 text-center">
-            © 2026 Amen Tsehaie
+            Copyright © 2026 Amen Tsehaie - All rights reserved.
           </p>
           <button
             onClick={scrollToTop}

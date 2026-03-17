@@ -8,10 +8,9 @@ import portretImg from '../../assets/images/portret.png';
 
 
 // ─── EmailJS Configuration ────────────────────────────────────────────────────
-// Fill in these values from your EmailJS dashboard: https://www.emailjs.com/
-const EMAILJS_SERVICE_ID  = 'service_oi6m9dw';
-const EMAILJS_TEMPLATE_ID = 'template_optklhw';
-const EMAILJS_PUBLIC_KEY  = '4caR4iubd_PtWzCG6';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface FormData {
@@ -39,7 +38,7 @@ const SOCIAL_LINKS = [
   {
     id: 'instagram',
     label: 'Instagram',
-    href: '#', // Add your Instagram URL here
+    href: 'https://www.instagram.com/amenino.2/', // Add your Instagram URL here
     icon: <Instagram size={20} />,
   },
 ];
@@ -56,6 +55,12 @@ export const Contact = () => {
 
   const onSubmit = async (data: FormData) => {
     setStatus('loading');
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      setStatus('error');
+      return;
+    }
+
     try {
       await emailjs.send(
         EMAILJS_SERVICE_ID,
