@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import logoImage from '../../assets/images/logo2.png';
 
 const LEFT_LINKS = [
   { name: 'About', href: '#about' },
@@ -37,6 +38,14 @@ export const Header = () => {
     setMobileMenuOpen(false);
     
     setTimeout(() => {
+      if (href === '#home' || href === '#hero') {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        return;
+      }
+
       const element = document.querySelector(href);
       if (element) {
         const offsetTop = element.getBoundingClientRect().top + window.scrollY - 100;
@@ -65,11 +74,12 @@ export const Header = () => {
             
             {/* Mobile Logo (left edge) */}
             <a 
-              href="#home" 
-              onClick={(e) => scrollToSection(e, '#home')}
-              className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border-2 border-white bg-white text-dark font-black tracking-tighter text-lg"
+              href="#hero" 
+              onClick={(e) => scrollToSection(e, '#hero')}
+              className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg bg-transparent"
+              aria-label="Home"
             >
-              A.T
+              <img src={logoImage} alt="Amen Tsehaie logo" className="w-9 h-9 object-contain scale-[1.38] drop-shadow-[0_0_12px_rgba(255,255,255,0.18)]" />
             </a>
             
             {/* Desktop Left Nav */}
@@ -89,11 +99,12 @@ export const Header = () => {
 
             {/* Logo Center (Desktop) */}
             <a 
-              href="#home" 
-              onClick={(e) => scrollToSection(e, '#home')}
-              className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center w-12 h-12 rounded-[14px] border border-white/20 bg-white text-dark font-black text-xl hover:scale-110 transition-transform duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+              href="#hero" 
+              onClick={(e) => scrollToSection(e, '#hero')}
+              className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center w-14 h-14 rounded-[14px] bg-transparent hover:scale-110 transition-transform duration-300"
+              aria-label="Home"
             >
-              A.T
+              <img src={logoImage} alt="Amen Tsehaie logo" className="w-11 h-11 object-contain scale-[1.38] drop-shadow-[0_0_14px_rgba(255,255,255,0.18)]" />
             </a>
 
             {/* Desktop Right Nav */}
