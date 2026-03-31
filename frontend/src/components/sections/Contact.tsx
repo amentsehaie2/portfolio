@@ -297,32 +297,6 @@ export const Contact = () => {
                   amentsehaie2@gmail.com
                 </a>
               </div>
-
-              {/* Social Links */}
-              <div>
-                <p className="text-xs uppercase tracking-widest text-white/40 font-semibold mb-5">
-                  Find me on
-                </p>
-                <div className="flex flex-col gap-3">
-                  {SOCIAL_LINKS.map((link) => (
-                    <a
-                      key={link.id}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center gap-4 w-fit"
-                    >
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-white/60 group-hover:bg-primary/10 group-hover:border-primary/30 group-hover:text-primary transition-all duration-300">
-                        {link.icon}
-                      </div>
-                      <span className="text-white/60 group-hover:text-white transition-colors duration-300 text-sm">
-                        {link.label}
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
             </div>
           </FadeIn>
 

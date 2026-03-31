@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { FluidBackground } from './components/ui/FluidBackground';
@@ -9,6 +10,13 @@ import { Contact } from './components/sections/Contact';
 import { ScrollProgress } from './components/ui/ScrollProgress';
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-dark text-white font-sans selection:bg-primary/30">
     <ScrollProgress />

@@ -23,7 +23,7 @@ export const Hero = () => {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-10 overflow-hidden z-10"
     >
-      <div className="flex flex-col items-center text-center max-w-4xl w-full">
+      <div className="flex flex-col items-center text-center max-w-4xl w-full mt-12 md:mt-16">
         {/* Profile Photo */}
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
