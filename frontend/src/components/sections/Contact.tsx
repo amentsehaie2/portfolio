@@ -148,6 +148,7 @@ export const Contact = () => {
                       id="contact-name"
                       type="text"
                       placeholder="Amen Tsehaie"
+                      disabled={status === 'loading'}
                       className={errors.name ? inputError : inputNormal}
                       {...register('name', { required: 'Name is required' })}
                     />
@@ -167,6 +168,7 @@ export const Contact = () => {
                       id="contact-email"
                       type="email"
                       placeholder="you@example.com"
+                      disabled={status === 'loading'}
                       className={errors.email ? inputError : inputNormal}
                       {...register('email', {
                         required: 'Email is required',
@@ -192,6 +194,7 @@ export const Contact = () => {
                       id="contact-phone"
                       type="tel"
                       placeholder="+31 6 12345678"
+                      disabled={status === 'loading'}
                       className={inputNormal}
                       {...register('phone')}
                     />
@@ -206,6 +209,7 @@ export const Contact = () => {
                       id="contact-message"
                       rows={5}
                       placeholder="Tell me about your project or opportunity…"
+                      disabled={status === 'loading'}
                       className={`${errors.message ? inputError : inputNormal} resize-none`}
                       {...register('message', { required: 'Message is required' })}
                     />

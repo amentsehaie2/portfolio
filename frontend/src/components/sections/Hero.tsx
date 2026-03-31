@@ -56,7 +56,7 @@ export const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          Software Developer | Building Digital Experiences
+          Software Engineer | Building Digital Experiences
         </motion.p>
 
         {/* Social Links & CTA */}

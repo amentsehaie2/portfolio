@@ -1,27 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const FluidBackground = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-      
-      const scrolled = window.scrollY;
-      const rate = scrolled * -0.15;
-      
-      // Apply subtle parallax effect
-      containerRef.current.style.transform = `translate3d(0, ${rate}px, 0)`;
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 2000], [0, -300]);
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden bg-[#000000] pointer-events-none w-full h-full">
-      <div 
-        ref={containerRef}
+      <motion.div 
+        style={{ y }}
         className="absolute inset-0 w-full h-[120%] -top-[10%] opacity-100 will-change-transform"
       >
         <svg 
@@ -172,7 +158,7 @@ export const FluidBackground = () => {
 
         {/* CSS Glassmorphism & Atmospheric Depth blending over the background elements */}
         <div className="absolute inset-0 backdrop-blur-[1px] opacity-10 pointer-events-none" />
-      </div>
+      </motion.div>
 
       {/* Edge vignettes to naturally blend the wave into the pitch black canvas at top and bottom edges */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-90 pointer-events-none" />

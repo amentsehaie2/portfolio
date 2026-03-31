@@ -25,7 +25,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <motion.button
         ref={ref}
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
         whileTap={{ scale: 0.95 }}
         className={`${baseStyles} ${variants[variant]} ${className}`}
         {...props}

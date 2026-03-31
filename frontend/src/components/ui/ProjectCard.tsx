@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from './Button';
 
@@ -21,18 +22,33 @@ export const ProjectCard = ({
   githubUrl,
   outcomes,
 }: ProjectCardProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="group relative overflow-hidden rounded-xl bg-dark-lighter border border-white/5 transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,153,255,0.15)] flex flex-col h-full"
+      className="group relative overflow-hidden rounded-xl bg-dark-lighter border border-white/5 transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,153,255,0.15)] flex flex-col h-full cursor-pointer"
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-dark">
+        <AnimatePresence>
+          {!isLoaded && (
+            <motion.div
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-white/5 animate-pulse"
+            />
+          )}
+        </AnimatePresence>
         <img
           src={imageUrl}
           alt={title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale-[50%] group-hover:grayscale-0"
+          loading="lazy"
+          onLoad={() => setIsLoaded(true)}
+          className={`h-full w-full object-cover transition-all duration-700 group-hover:scale-110 grayscale-[50%] group-hover:grayscale-0 ${
+            isLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-md'
+          }`}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-lighter to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-lighter to-transparent pointer-events-none" />
       </div>
 
       <div className="flex flex-col flex-grow p-6">
