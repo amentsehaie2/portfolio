@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '../ui/Button';
 import profileImg from '../../assets/images/profile.jpg';
 
@@ -8,6 +8,13 @@ export const Hero = () => {
     const aboutSection = document.getElementById('work');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -38,7 +45,7 @@ export const Hero = () => {
 
         {/* Name */}
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4"
+          className="text-5xl md:text-7xl lg:text-8xl font-light whitespace-nowrap"
           initial="hidden"
           animate="visible"
           variants={{
@@ -46,12 +53,12 @@ export const Hero = () => {
             visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2 } },
           }}
         >
-          Amen <span className="text-primary font-medium">Tsehaie</span>
+          Amen Tsehaie
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
-          className="text-xl md:text-2xl text-secondary mb-10 max-w-2xl font-light"
+          className="text-xl md:text-2xl  mb-10 max-w-2xl font-light"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -77,16 +84,16 @@ export const Hero = () => {
             <a href="https://www.linkedin.com/in/amen-tsehaie-158a80274/" target="_blank" rel="noreferrer" className="text-white/70 hover:text-primary transition-colors hover:scale-110 transform duration-300 p-2">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:amentsehaie2@gmail.com" className="text-white/70 hover:text-primary transition-colors hover:scale-110 transform duration-300 p-2">
+            <button onClick={scrollToContact} className="text-white/70 hover:text-primary transition-colors hover:scale-110 transform duration-300 p-2">
               <Mail size={24} />
-            </a>
+            </button>
           </div>
         </motion.div>
       </div>
 
       {/* Downward Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-10 cursor-pointer text-white/50 hover:text-primary transition-colors"
+      {/* <motion.div
+        className="absolute bottom-10 cursor-pointer text-white/50 hover:text-black/50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
@@ -98,7 +105,7 @@ export const Hero = () => {
         >
           <ArrowDown size={32} />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };

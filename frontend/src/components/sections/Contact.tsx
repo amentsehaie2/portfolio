@@ -272,8 +272,7 @@ export const Contact = () => {
               <div>
                 <h3 className="text-xl font-light text-white mb-3">Let's work together!</h3>
                 <p className="text-white/60 leading-relaxed">
-                  Whether you have a project in mind, or you just
-                  want to say hi — my inbox is always open.
+                  Looking for a professional website or a custom digital solution for your business? Let's collaborate — my inbox is always open.
                 </p>
               </div>
 

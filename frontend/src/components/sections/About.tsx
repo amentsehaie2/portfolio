@@ -40,7 +40,7 @@ export const About = () => {
           <div className="lg:col-span-7 space-y-8">
             <FadeIn delay={0.1}>
               <h3 className="text-2xl font-light text-white/90 leading-tight">
-                My mission is to build digital experiences that are not only functional, but also intuitive, visually striking, and performant.
+                My mission is to build digital experiences for companies or individuals that are not only functional, but also intuitive, visually striking, and performant.
               </h3>
             </FadeIn>
 
