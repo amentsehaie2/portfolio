@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import { Mail, Linkedin, Github, Instagram, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Mail, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { FadeIn } from '../../animations/FadeIn';
 import portretImg from '../../assets/images/portret.png';
 
@@ -22,26 +22,7 @@ interface FormData {
 
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 
-const SOCIAL_LINKS = [
-  {
-    id: 'linkedin',
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/amen-tsehaie-158a80274/',
-    icon: <Linkedin size={20} />,
-  },
-  {
-    id: 'github',
-    label: 'GitHub',
-    href: 'https://github.com/amentsehaie2',
-    icon: <Github size={20} />,
-  },
-  {
-    id: 'instagram',
-    label: 'Instagram',
-    href: 'https://www.instagram.com/amenino.2/', // Add your Instagram URL here
-    icon: <Instagram size={20} />,
-  },
-];
+
 
 export const Contact = () => {
   const [status, setStatus] = useState<SubmitStatus>('idle');

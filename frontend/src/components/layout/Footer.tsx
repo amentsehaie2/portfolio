@@ -1,12 +1,6 @@
 import { Github, Linkedin, Instagram, ArrowUp } from 'lucide-react';
 import logoImage from '../../assets/images/logo2.png';
 
-const NAV_LINKS = [
-  { label: 'About',   href: '#about'   },
-  { label: 'Work',    href: '#work'    },
-  { label: 'Skills',  href: '#skills'  },
-  { label: 'Contact', href: '#contact' },
-];
 
 const SOCIAL_LINKS = [
   { id: 'linkedin',  href: 'https://www.linkedin.com/in/amen-tsehaie-158a80274/', icon: <Linkedin size={18} />,  label: 'LinkedIn'  },
@@ -14,13 +8,6 @@ const SOCIAL_LINKS = [
   { id: 'instagram', href: 'https://www.instagram.com/amenino.2/',                                                   icon: <Instagram size={18} />, label: 'Instagram' },
 ];
 
-const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-  e.preventDefault();
-  const el = document.querySelector(href);
-  if (el) {
-    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
-  }
-};
 
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
