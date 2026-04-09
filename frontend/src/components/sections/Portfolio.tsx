@@ -3,7 +3,9 @@ import { ProjectCard } from '../ui/ProjectCard';
 import sonicLensImg from '../../assets/images/sonic_lens_showcase.png';
 
 
-const GITHUB_PROFILE = 'https://github.com/amentsehaie2';
+const SONIC_LENS_URL = 'https://github.com/amentsehaie2/sonic_lens';
+const OFFICE_URL = 'https://github.com/amentsehaie2/Calander_WebApp';
+const SCOOTER_CLI_URL = 'https://github.com/amentsehaie2/SQ-UM_24-25';
 
 const projects = [
   {
@@ -13,7 +15,7 @@ const projects = [
       'An AI-powered Chrome extension that automatically gets the lyrics from songs, saving you time by extracting the key, chord tones and other musical insights from any video in seconds.',
     tags: ['Chrome Extension', 'Cloudflare', 'React', 'TypeScript'],
     imageUrl: sonicLensImg,
-    githubUrl: GITHUB_PROFILE,
+    githubUrl: SONIC_LENS_URL,
     outcomes:
       'Makes learning new songs a piece of cake.',
   },
@@ -24,7 +26,7 @@ const projects = [
       'A full-stack office management system for tracking employees, tasks, and schedules. Built with a clean REST API and a responsive React frontend for day-to-day team management.',
     tags: ['React', 'C#', 'ASP.NET Core', 'SQLite', 'REST API', 'TypeScript'],
     imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-    githubUrl: GITHUB_PROFILE,
+    githubUrl: OFFICE_URL,
     outcomes:
       'Streamlines team operations with a centralised, real-time management dashboard.',
   },
@@ -35,7 +37,7 @@ const projects = [
       'A security-heavy command-line application for managing a scooter fleet. Features role-based access control, encrypted data storage, and comprehensive audit logging.',
     tags: ['Python', 'CLI', 'Cryptography', 'Security', 'SQLite'],
     imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-    githubUrl: GITHUB_PROFILE,
+    githubUrl: SCOOTER_CLI_URL,
     outcomes:
       'Demonstrates a security-first architecture with robust authentication and encryption.',
   },
