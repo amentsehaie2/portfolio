@@ -40,20 +40,6 @@ export const Footer = () => {
             <img src={logoImage} alt="Amen Tsehaie logo" className="w-10 h-10 object-contain scale-[1.38] drop-shadow-[0_0_14px_rgba(255,255,255,0.18)]" />
           </div>
 
-          {/* Nav links */}
-          <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => scrollTo(e, link.href)}
-                className="text-sm text-white/50 hover:text-white transition-colors duration-300"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
           {/* Social icons */}
           <div className="flex items-center gap-3">
             {SOCIAL_LINKS.map((link) => (
