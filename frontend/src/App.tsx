@@ -4,6 +4,7 @@ import { Footer } from './components/layout/Footer';
 import { FluidBackground } from './components/ui/FluidBackground';
 import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
+import { GetToKnowMeBetter } from './components/sections/GetToKnowMeBetter';
 import { Portfolio } from './components/sections/Portfolio';
 import { Skills } from './components/sections/Skills';
 import { Contact } from './components/sections/Contact';
@@ -26,6 +27,7 @@ function App() {
       <main className="relative z-10">
         <Hero />
         <About />
+        <GetToKnowMeBetter />
         <Portfolio />
         <Skills />
         <Contact />

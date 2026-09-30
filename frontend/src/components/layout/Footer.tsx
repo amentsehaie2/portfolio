@@ -1,4 +1,5 @@
-import { Github, Linkedin, Instagram, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Instagram, ArrowLeft, ArrowUp } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import logoImage from '../../assets/images/logo2.png';
 
 
@@ -12,6 +13,9 @@ const SOCIAL_LINKS = [
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
 export const Footer = () => {
+  const location = useLocation();
+  const isBlogPage = location.pathname.startsWith('/blog');
+
   return (
     <footer className="relative z-10 bg-dark border-t border-transparent"
       style={{ borderImage: 'linear-gradient(to right, #0099ff, #00d4ff) 1' }}
@@ -50,14 +54,25 @@ export const Footer = () => {
           <p className="text-xs text-white/30 text-center">
             Copyright © 2026 Amen Tsehaie - All rights reserved.
           </p>
-          <button
-            onClick={scrollToTop}
-            aria-label="Back to top"
-            className="flex items-center gap-2 text-xs text-white/30 hover:text-primary transition-colors duration-300 group"
-          >
-            <ArrowUp size={14} className="group-hover:-translate-y-0.5 transition-transform duration-300" />
-            Back to top
-          </button>
+          {isBlogPage ? (
+            <Link
+              to="/"
+              aria-label="Back to home"
+              className="flex items-center gap-2 text-xs text-white/30 hover:text-primary transition-colors duration-300 group"
+            >
+              <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform duration-300" />
+              Back to home
+            </Link>
+          ) : (
+            <button
+              onClick={scrollToTop}
+              aria-label="Back to top"
+              className="flex items-center gap-2 text-xs text-white/30 hover:text-primary transition-colors duration-300 group"
+            >
+              <ArrowUp size={14} className="group-hover:-translate-y-0.5 transition-transform duration-300" />
+              Back to top
+            </button>
+          )}
         </div>
       </div>
     </footer>

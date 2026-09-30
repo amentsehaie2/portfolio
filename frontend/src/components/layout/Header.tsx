@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import logoImage from '../../assets/images/logo2.png';
 
 const LEFT_LINKS = [
@@ -16,6 +17,8 @@ const RIGHT_LINKS = [
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +39,11 @@ export const Header = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+
+    if (location.pathname !== '/') {
+      navigate(`/${href}`);
+      return;
+    }
     
     setTimeout(() => {
       if (href === '#home' || href === '#hero') {
@@ -57,6 +65,18 @@ export const Header = () => {
     }, mobileMenuOpen ? 300 : 0);
   };
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+
+    if (location.pathname !== '/') {
+      navigate('/');
+      return;
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full pt-6 px-4 md:px-0 pointer-events-none">
@@ -74,8 +94,8 @@ export const Header = () => {
             
             {/* Mobile Logo (left edge) */}
             <a 
-              href="#hero" 
-              onClick={(e) => scrollToSection(e, '#hero')}
+              href="/"
+              onClick={handleLogoClick}
               className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg bg-transparent"
               aria-label="Home"
             >
@@ -99,8 +119,8 @@ export const Header = () => {
 
             {/* Logo Center (Desktop) */}
             <a 
-              href="#hero" 
-              onClick={(e) => scrollToSection(e, '#hero')}
+              href="/"
+              onClick={handleLogoClick}
               className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center w-14 h-14 rounded-[14px] bg-transparent hover:scale-110 transition-transform duration-300"
               aria-label="Home"
             >
