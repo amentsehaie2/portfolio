@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amentsehaie.vercel.app/sitemap.xml
