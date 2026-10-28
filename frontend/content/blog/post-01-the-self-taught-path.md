@@ -18,8 +18,8 @@ readingTime: "[X] min read"
 
 *I never had lessons. I had a dusty guitar, a phone full of saved videos and a church that needed help.*
 
-![My first two electric guitars, a dark blue one and a white Squier Stratocaster, leaning against a desk with a laptop, MIDI keyboard and headphones](/images/blog/first-setup.webp "portrait")
-*Figure 1. My first home setup.*
+![A guitarist in a green t-shirt playing a white electric guitar with a strap, seen from the chest down](/images/blog/guitar_3.jpg)
+*Figure 1. Playing my white Squier Stratocaster.*
 
 ## A guitar that was only decoration
 
@@ -42,7 +42,7 @@ Because almost every video I watched was electric guitar, I naturally wanted one
 
 My "teacher" was Instagram. I built a saved collection of videos and posts about music theory, techniques and players I liked, so I could go back and review them whenever I wanted. Because I kept returning to the same lessons, music theory started to feel surprisingly easy.
 
-It turns out I'm not unusual. Researchers have described how young musicians are moving from the classic "listen and copy" way of learning to ["watching and copying" through online videos](https://doi.org/10.5429/2079-3871(2023)v13i3.7en), and argue that this is a real form of informal learning. That matched my experience exactly. *[Optional: one sentence on how that feels to read as someone who learned this way.]*
+It turns out I'm not unusual. Researchers have described how young musicians are moving from the classic "listen and copy" way of learning to ["watching and copying" through online videos](https://doi.org/10.5429/2079-3871(2023)v13i3.7en), and argue that this is a real form of informal learning. That matched my experience exactly.
 
 ## From the bedroom to the stage
 
@@ -81,7 +81,7 @@ All that messing around with EQ and levels at home meant that when I stood behin
 
 > The buttons were. The ideas weren't.
 
-*If you're building your own first setup, start with [INTERNAL LINK: Post 02, "The $150 Home Studio"] and [INTERNAL LINK: Post 05, "Electric vs. Acoustic: Capturing Clean Guitar Tracks"].*
+*If you're building your own first setup, start with [The $150 Home Studio](/blog/budget-home-studio-recording-gear-guitarists) and [INTERNAL LINK: Post 05, "Electric vs. Acoustic: Capturing Clean Guitar Tracks"].*
 
 ## My take: get thrown in the deep end
 
@@ -104,7 +104,7 @@ I'm not against formal training. Some structure helps, and I wish I'd had more o
 
 This post is the "why". The rest of the blog is the "how":
 
-- **Setting up at home on a budget:** [INTERNAL LINK: Post 02, "The $150 Home Studio"]
+- **Setting up at home on a budget:** [The $150 Home Studio](/blog/budget-home-studio-recording-gear-guitarists)
 - **Running sound on a mixer you've never seen:** [INTERNAL LINK: Post 03, "Sunday Morning Panic"]
 - **Your first time playing in church:** [INTERNAL LINK: Post 04, "First Time Playing at the Sanctuary"]
 - **Recording clean guitar at home and live:** [INTERNAL LINK: Post 05, "Electric vs. Acoustic"]
