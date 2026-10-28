@@ -62,7 +62,7 @@ Then I stood in front of it and saw what felt like a thousand buttons. I had no 
 ![A large digital live sound console with touchscreens, rotary knobs and faders in blue light](/images/blog/stock-live-console.webp)
 *Photo by [Ayanangshu Biswas](https://unsplash.com/photos/a-professional-audio-mixing-console-with-blue-lighting-fYheZxcB3nM), Unsplash.*
 
-I learned the way I learned guitar: trial and error, plus someone showing me the basics. After that I went deeper on YouTube, watching people explain how to work more efficiently, what EQ and compression actually do, and why proper gain staging matters. *Gain staging* means setting a healthy signal level at every step of the chain, so you keep enough headroom without burying the sound in noise ([Sound On Sound explains it well here](https://www.soundonsound.com/techniques/gain-staging-your-daw-software)). Every service behind the desk made it a bit clearer. *Want the step-by-step version? Read [INTERNAL LINK: Post 03, "Sunday Morning Panic: Mixing Unfamiliar Consoles"].*
+I learned the way I learned guitar: trial and error, plus someone showing me the basics. After that I went deeper on YouTube, watching people explain how to work more efficiently, what EQ and compression actually do, and why proper gain staging matters. *Gain staging* means setting a healthy signal level at every step of the chain, so you keep enough headroom without burying the sound in noise ([Sound On Sound explains it well here](https://www.soundonsound.com/techniques/gain-staging-your-daw-software)). Every service behind the desk made it a bit clearer. *Want the step-by-step version? Read [Sunday Morning Panic: Mixing Unfamiliar Consoles](/blog/mixing-unfamiliar-church-sound-consoles).*
 
 ## Why home recording made live sound easier
 
@@ -105,7 +105,7 @@ I'm not against formal training. Some structure helps, and I wish I'd had more o
 This post is the "why". The rest of the blog is the "how":
 
 - **Setting up at home on a budget:** [The $150 Home Studio](/blog/budget-home-studio-recording-gear-guitarists)
-- **Running sound on a mixer you've never seen:** [INTERNAL LINK: Post 03, "Sunday Morning Panic"]
+- **Running sound on a mixer you've never seen:** [Sunday Morning Panic](/blog/mixing-unfamiliar-church-sound-consoles)
 - **Your first time playing in church:** [INTERNAL LINK: Post 04, "First Time Playing at the Sanctuary"]
 - **Recording clean guitar at home and live:** [INTERNAL LINK: Post 05, "Electric vs. Acoustic"]
 - **Stopping feedback without ruining the vocals:** [INTERNAL LINK: Post 06, "Eliminating Live Vocal Feedback"]

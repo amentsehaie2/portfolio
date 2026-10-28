@@ -115,7 +115,7 @@ But the most important thing isn't gear at all: **learn the philosophy behind to
 ## Where to go next
 
 - **Why I started at all:** [The Self-Taught Path](/blog/self-taught-path)
-- **When you're the one behind the mixer:** [INTERNAL LINK: Post 03, "Sunday Morning Panic"]
+- **When you're the one behind the mixer:** [Sunday Morning Panic](/blog/mixing-unfamiliar-church-sound-consoles)
 - **Taking your home tone to church:** [INTERNAL LINK: Post 04, "First Time Playing at the Sanctuary"]
 - **Getting clean guitar tracks at home and live:** [INTERNAL LINK: Post 05, "Electric vs. Acoustic"]
 - **Stopping feedback without ruining the vocals:** [INTERNAL LINK: Post 06, "Eliminating Live Vocal Feedback"]
