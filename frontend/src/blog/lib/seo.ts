@@ -23,7 +23,7 @@ export const isPlaceholderAlt = (alt: string | undefined) => !!alt && alt.trim()
 
 /** First markdown image that is a real one (not an `[IMAGE: ...]` placeholder). */
 export const firstRealImage = (markdown: string) => {
-  for (const m of markdown.matchAll(/!\[((?:[^[\]]|\[[^\]]*\])*)\]\(([^)\s]+)\)/g)) {
+  for (const m of markdown.matchAll(/!\[((?:[^[\]]|\[[^\]]*\])*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g)) {
     if (!isPlaceholderAlt(m[1])) return m[2];
   }
   return undefined;

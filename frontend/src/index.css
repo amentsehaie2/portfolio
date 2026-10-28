@@ -1,3 +1,8 @@
+@import '@fontsource-variable/fraunces/wght.css';
+@import '@fontsource-variable/fraunces/wght-italic.css';
+@import '@fontsource/space-mono/400.css';
+@import '@fontsource/space-mono/700.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,4 +12,48 @@
     @apply bg-dark text-white font-sans antialiased;
   }
 }
-  
+
+@layer components {
+  /* Blog article typography: section numerals, drop caps and alternating key sentences. */
+  .blog-prose {
+    counter-reset: section;
+  }
+
+  .blog-prose h2 {
+    counter-increment: section;
+  }
+
+  .blog-prose h2::before {
+    content: counter(section, decimal-leading-zero);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: 'Fraunces Variable', Georgia, serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 0.85;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(110, 184, 255, 0.55);
+  }
+
+  .blog-prose h2 + p::first-letter {
+    float: left;
+    padding: 0.4rem 0.7rem 0 0;
+    font-family: 'Fraunces Variable', Georgia, serif;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 0.75;
+    color: #6eb8ff;
+  }
+
+  .blog-prose .key-quote p {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+
+  .blog-prose .key-quote:nth-of-type(even) {
+    margin-left: auto;
+    text-align: right;
+  }
+}

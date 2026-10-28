@@ -4,7 +4,7 @@ import { Footer } from '../../components/layout/Footer';
 import { Header } from '../../components/layout/Header';
 import { FluidBackground } from '../../components/ui/FluidBackground';
 import { MarkdownBody } from '../components/MarkdownBody';
-import { formatPostDate, getPostBySlug } from '../lib/posts';
+import { getPostBySlug } from '../lib/posts';
 import { notFoundSeo, postSeo } from '../lib/seo';
 import { useSeo } from '../lib/useSeo';
 import { BlogNotFound } from './BlogNotFound';
@@ -28,8 +28,8 @@ export const BlogPostPage = () => {
       <Header />
 
       <main className="relative z-10 px-4 py-32 md:px-12">
-        <article className="mx-auto w-full max-w-[70ch]">
-          <nav aria-label="Breadcrumb" className="mb-8 text-sm text-white/50">
+        <article className="mx-auto w-full max-w-5xl">
+          <nav aria-label="Breadcrumb" className="mb-8 font-mono text-xs uppercase tracking-widest text-white/50">
             <ol className="flex flex-wrap items-center gap-2">
               <li>
                 <Link to="/" className="hover:text-white">Home</Link>
@@ -43,9 +43,7 @@ export const BlogPostPage = () => {
             </ol>
           </nav>
 
-          <p className="mb-6 text-sm text-white/60">
-            <time dateTime={post.date}>{formatPostDate(post.date)}</time>
-            <span aria-hidden="true"> · </span>
+          <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-primary">
             {post.readingTime}
             <span aria-hidden="true"> · </span>
             By Amen Tsehaie
@@ -53,8 +51,8 @@ export const BlogPostPage = () => {
 
           <MarkdownBody content={post.content} />
 
-          <p className="mt-16">
-            <Link to="/blog" className="text-secondary underline underline-offset-2 hover:text-white">
+          <p className="mt-20 font-mono text-sm md:ml-[8%]">
+            <Link to="/blog" className="text-secondary underline underline-offset-4 hover:text-white">
               &larr; Back to all posts
             </Link>
           </p>

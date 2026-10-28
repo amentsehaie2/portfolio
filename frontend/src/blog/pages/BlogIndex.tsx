@@ -23,7 +23,7 @@ export const BlogIndex = () => {
         <div className="mx-auto max-w-6xl">
           <div className="max-w-4xl">
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-primary">Amen Tsehaie / Blog</p>
-            <h1 className="max-w-3xl text-5xl font-light leading-tight md:text-7xl">The Self-Taught Audio Lab</h1>
+            <h1 className="max-w-3xl font-display text-5xl font-semibold leading-[1.02] tracking-tight md:text-7xl">The Self-Taught Audio Lab</h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/65">
               For self-taught guitarists, church sound volunteers and home-studio producers.
             </p>
@@ -35,12 +35,12 @@ export const BlogIndex = () => {
                 key={post.slug}
                 className="group flex h-full flex-col overflow-hidden rounded-xl border border-white/5 bg-dark-lighter p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,153,255,0.15)]"
               >
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+                <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-white/60">
                   <time dateTime={post.date}>{formatPostDate(post.date)}</time>
                   <span aria-hidden="true"> · </span>
                   {post.readingTime}
                 </p>
-                <h2 className="mb-3 text-2xl font-semibold text-white">{post.title}</h2>
+                <h2 className="mb-3 font-display text-2xl font-semibold text-white">{post.title}</h2>
                 <p className="mb-6 flex-grow leading-relaxed text-white/70">{post.metaDescription}</p>
                 <Link
                   to={`/blog/${post.slug}`}

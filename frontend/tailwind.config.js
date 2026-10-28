@@ -15,6 +15,8 @@ export default {
       },
       fontFamily: {
         sans: ['Helvetica', 'Arial', 'sans-serif'],
+        display: ['"Fraunces Variable"', 'Georgia', 'serif'],
+        mono: ['"Space Mono"', 'ui-monospace', 'monospace'],
       },
       screens: {
         'sm': '640px',
