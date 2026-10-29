@@ -10,7 +10,6 @@ secondaryKeywords:
   - "Nashville number system guitar"
 persona: "Bedroom Ben"
 funnelStage: "Problem / Solution"
-date: "[PUBLISH DATE]"
 readingTime: "[X] min read"
 ---
 

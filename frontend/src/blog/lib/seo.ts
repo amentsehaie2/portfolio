@@ -12,7 +12,6 @@ export interface SeoData {
   type: 'website' | 'article';
   image?: string;
   robots?: string;
-  publishedTime?: string;
   jsonLd: object[];
 }
 
@@ -63,14 +62,12 @@ export const postSeo = (post: BlogPost): SeoData => {
     canonical: url,
     type: 'article',
     image: image ? absolute(image) : undefined,
-    publishedTime: post.date,
     jsonLd: [
       {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: post.title,
         description: post.metaDescription,
-        datePublished: post.date,
         author: { '@type': 'Person', name: AUTHOR_NAME, url: SITE_URL },
         url,
         mainEntityOfPage: url,
@@ -121,8 +118,7 @@ export const seoToTags = (seo: SeoData): HeadTag[] => {
     tags.push({ tag: 'meta', attrs: { property: 'og:image', content: seo.image } });
     tags.push({ tag: 'meta', attrs: { name: 'twitter:image', content: seo.image } });
   }
-  if (seo.publishedTime) {
-    tags.push({ tag: 'meta', attrs: { property: 'article:published_time', content: seo.publishedTime } });
+  if (seo.type === 'article') {
     tags.push({ tag: 'meta', attrs: { property: 'article:author', content: AUTHOR_NAME } });
   }
   if (seo.robots) tags.push({ tag: 'meta', attrs: { name: 'robots', content: seo.robots } });

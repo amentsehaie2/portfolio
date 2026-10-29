@@ -64,30 +64,18 @@ const toPost = (path: string, raw: string): BlogPost => {
     secondaryKeywords: Array.isArray(data.secondaryKeywords) ? data.secondaryKeywords : [],
     persona: str(data.persona),
     funnelStage: str(data.funnelStage),
-    date: str(data.date),
     readingTime: !readingTime || /\[X\]/.test(readingTime) ? computeReadingTime(content) : readingTime,
     postNumber: number ? Number(number) : null,
     content,
   };
 };
 
-const timestamp = (date: string) => {
-  const t = Date.parse(date);
-  return Number.isNaN(t) ? 0 : t;
-};
-
 const posts: BlogPost[] = Object.entries(files)
   .map(([path, raw]) => toPost(path, raw))
-  .sort((a, b) => timestamp(b.date) - timestamp(a.date) || (b.postNumber ?? 0) - (a.postNumber ?? 0));
+  .sort((a, b) => (a.postNumber ?? Infinity) - (b.postNumber ?? Infinity));
 
 export const getAllPosts = () => posts;
 
 export const getPostBySlug = (slug: string | undefined) => posts.find((post) => post.slug === slug);
 
 export const getPostByNumber = (n: number) => posts.find((post) => post.postNumber === n);
-
-export const formatPostDate = (date: string) => {
-  const t = Date.parse(date);
-  if (Number.isNaN(t)) return date;
-  return new Date(t).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
-};

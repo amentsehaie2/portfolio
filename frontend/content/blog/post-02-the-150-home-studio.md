@@ -10,7 +10,6 @@ secondaryKeywords:
   - "free amp sim"
 persona: "Bedroom Ben"
 funnelStage: "Awareness / Problem"
-date: "[PUBLISH DATE]"
 readingTime: "[X] min read"
 ---
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Footer } from '../../components/layout/Footer';
 import { Header } from '../../components/layout/Header';
 import { FluidBackground } from '../../components/ui/FluidBackground';
-import { formatPostDate, getAllPosts } from '../lib/posts';
+import { getAllPosts } from '../lib/posts';
 import { blogIndexSeo } from '../lib/seo';
 import { useSeo } from '../lib/useSeo';
 
@@ -36,8 +36,6 @@ export const BlogIndex = () => {
                 className="group flex h-full flex-col overflow-hidden rounded-xl border border-white/5 bg-dark-lighter p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,153,255,0.15)]"
               >
                 <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-white/60">
-                  <time dateTime={post.date}>{formatPostDate(post.date)}</time>
-                  <span aria-hidden="true"> · </span>
                   {post.readingTime}
                 </p>
                 <h2 className="mb-3 font-display text-2xl font-semibold text-white">{post.title}</h2>

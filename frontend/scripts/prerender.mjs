@@ -35,12 +35,12 @@ for (const route of routes) {
 
 const urls = [
   { loc: `${siteUrl}/` },
-  ...routes.filter((r) => r.path !== '/404').map((r) => ({ loc: `${siteUrl}${r.path}`, lastmod: r.lastmod })),
+  ...routes.filter((r) => r.path !== '/404').map((r) => ({ loc: `${siteUrl}${r.path}` })),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
-  .map((u) => `  <url>\n    <loc>${u.loc}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : ''}\n  </url>`)
+  .map((u) => `  <url>\n    <loc>${u.loc}</loc>\n  </url>`)
   .join('\n')}
 </urlset>
 `;

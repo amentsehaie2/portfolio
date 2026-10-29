@@ -10,7 +10,6 @@ export interface PrerenderRoute {
   seo: SeoData;
   html: string;
   headHtml: string;
-  lastmod?: string;
 }
 
 const render = (url: string) =>
@@ -30,7 +29,6 @@ export const getPrerenderRoutes = (): PrerenderRoute[] => {
     seo: blogSeo,
     html: render('/blog'),
     headHtml: seoToHtml(blogSeo),
-    lastmod: posts[0]?.date,
   });
 
   for (const post of posts) {
@@ -40,7 +38,6 @@ export const getPrerenderRoutes = (): PrerenderRoute[] => {
       seo,
       html: render(`/blog/${post.slug}`),
       headHtml: seoToHtml(seo),
-      lastmod: post.date,
     });
   }
 

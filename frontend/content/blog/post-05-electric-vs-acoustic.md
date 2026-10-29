@@ -6,7 +6,6 @@ primaryKeyword: record guitar direct
 secondaryKeywords: [multi-effects pedal as audio interface, acoustic guitar DI box, noise gate placement, clean guitar recording, church guitar setup]
 persona: Bedroom Ben   # [CHECK: confirm persona; Sanctuary Sam is the secondary reader for the live section]
 funnelStage: consideration   # [CHECK: match your funnel mapping on the strategy slide]
-date: 2026-10-XX   # [CHECK: publish date]
 readingTime: 7 min
 ---
 

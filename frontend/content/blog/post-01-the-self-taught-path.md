@@ -10,7 +10,6 @@ secondaryKeywords:
   - "home recording for beginners"
 persona: "All personas (Bedroom Ben, Sanctuary Sam, DIY Dan)"
 funnelStage: "Awareness"
-date: "2026-10-27"
 readingTime: "[X] min read"
 ---
 

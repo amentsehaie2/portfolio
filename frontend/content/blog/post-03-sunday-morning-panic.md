@@ -10,7 +10,6 @@ secondaryKeywords:
   - "wireless mic dropout church"
 persona: "Sanctuary Sam"
 funnelStage: "Problem / Solution"
-date: "[PUBLISH DATE]"
 readingTime: "[X] min read"
 ---
 

@@ -6,8 +6,6 @@ export interface BlogPost {
   secondaryKeywords: string[];
   persona: string;
   funnelStage: string;
-  /** ISO date (YYYY-MM-DD) */
-  date: string;
   readingTime: string;
   /** Number from a `post-NN-...` file name, used to resolve `Post NN` CTA targets */
   postNumber: number | null;
